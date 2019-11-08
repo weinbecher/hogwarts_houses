@@ -1,0 +1,45 @@
+body {
+  background: url("http://getwallpapers.com/wallpaper/full/9/4/0/17379.jpg");
+  font-family: 'Mountains of Christmas', cursive;
+
+}
+
+hr{
+    border-top: 1px dashed black;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: hidden;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+
+div {
+  padding: 50px;
+  width: 200px;
+  text-align: left;
+}
+
+a {
+  color: black;
+}

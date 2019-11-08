@@ -1,0 +1,9 @@
+<p>First Name: <%= @student.first_name %></p>
+
+<p>Second Name: <%= @student.second_name %></p>
+
+<p>House: <%= @student.house.name %></p>
+
+<form method="post" action="/students/<%= @student.id %>/delete">
+<input type="submit" value="Delete Student"/>
+</form>
