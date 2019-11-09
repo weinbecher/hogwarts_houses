@@ -4,6 +4,13 @@
 
 <p>House: <%= @student.house.name %></p>
 
+
+
+<form method="get" action="<%= @student.id %>/edit">
+<input type="submit" value="Edit Student"/>
+</form>
+
+
 <form method="post" action="/students/<%= @student.id %>/delete">
 <input type="submit" value="Delete Student"/>
 </form>
