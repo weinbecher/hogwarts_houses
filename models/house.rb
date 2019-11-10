@@ -1,10 +1,10 @@
 require_relative('../db/sql_runner')
 
 class House
-  attr_reader :id, :name, :logo
+  attr_reader :id
+  attr_accessor  :name, :logo
 
   def initialize(options)
-
     @id = options['id'].to_i
     @name = options['name']
     @logo = options['logo']
@@ -24,6 +24,28 @@ class House
     values = [@name, @logo]
     house_data = SqlRunner.run(sql, values)
     @id = house_data.first()['id'].to_i
+  end
+
+
+  def update()
+    sql = "UPDATE houses SET
+    (
+      name,
+      logo
+    )
+    =
+    (
+      $1, $2
+    ) WHERE id = $3 "
+    values = [@name, @logo, @id]
+    SqlRunner.run(sql, values)
+  end
+
+
+  def delete()
+    sql = "DELETE FROM houses WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
 

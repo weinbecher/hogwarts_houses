@@ -17,7 +17,6 @@ get '/students/new' do
 
 end
 
-
 get '/students/:id' do
   @student = Student.find(params[:id])
   erb(:"students/show")
@@ -48,12 +47,3 @@ post '/students/:id/delete' do
   student.delete
   redirect to '/students'
 end
-
-
-#
-# Part 8
-#   - Alter the student to have a foreign key to House instead of text
-#   - Add a method to Student to find a house() for the student
-#
-# Part 9
-#   - Change the new student form to populate the drop down from the House table

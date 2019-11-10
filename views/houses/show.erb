@@ -1,0 +1,16 @@
+<h1> <%= @house.name  %> </h1>
+<p>
+
+  <img src= "<%= @house.logo%>" alt="<%= @house.name %>" height="auto" width="100%" >
+
+  <form method="get" action="<%= @house.id %>/edit">
+  <input type="submit" value="Edit House"/>
+  </form>
+
+
+  <form method="post" action="/houses/<%= @house.id %>/delete">
+  <input type="submit" value="Delete House"/>
+  </form>
+
+
+</p>

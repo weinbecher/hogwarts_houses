@@ -49,9 +49,6 @@ class Student
 
 
 
-
-
-
   def house()
     house = House.find(@house_id)
     return house

@@ -1,0 +1,13 @@
+<h2> Edit <%= @house.name %> </h2>
+
+<form method="post" action="/houses/<%= @house.id %>">
+    <label for="house-name">Name</label>
+    <input type="text" name="name" id="house-name" value=" <%= @house.name %>">
+  </br>
+
+    <label for="house-logo">Logo Url</label>
+    <input type="text" name="logo" id="house-logo"   value="<%= @house.logo %>">
+
+  <input type="submit" value="Update House">
+
+</form>
